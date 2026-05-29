@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annas Arrigo Sachi | Portfolio Premium Retro Cyberpunk</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neon: {
+                            cyan: '#00f0ff',
+                            pink: '#ff2d95',
+                            purple: '#b347ea',
+                            green: '#39ff14',
+                            yellow: '#ffe600',
+                            orange: '#ff6b35',
+                        }
+                    },
+                    fontFamily: {
+                        'cyber': ['"Orbitron"', 'sans-serif'],
+                        'mono': ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
+                        'body': ['"Inter"', '"Poppins"', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'pulse-neon': 'pulseNeon 2s ease-in-out infinite',
+                        'glitch': 'glitch 0.3s ease-in-out infinite',
+                        'scanline': 'scanline 8s linear infinite',
+                        'flicker': 'flicker 3s linear infinite',
+                        'particle': 'particle 15s linear infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                        'bounce-subtle': 'bounceSubtle 3s ease-in-out infinite',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #06060d;
+            --bg-secondary: #0c0c18;
+            --bg-card: #111122;
+            --bg-card-hover: #181830;
+            --bg-nav: #0a0a16;
+            --text-primary: #eaeaef;
+            --text-secondary: #b8b8cc;
+            --text-muted: #787898;
+            --border-color: #1e1e38;
+            --border-light: #2a2a48;
+            --neon-cyan: #00f0ff;
+            --neon-pink: #ff2d95;
+            --neon-purple: #b347ea;
+            --neon-green: #39ff14;
+            --neon-yellow: #ffe600;
+            --neon-orange: #ff6b35;
+            --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.25), 0 0 80px rgba(0, 240, 255, 0.1);
+            --glow-pink: 0 0 20px rgba(255, 45, 149, 0.5), 0 0 40px rgba(255, 45, 149, 0.25), 0 0 80px rgba(255, 45, 149, 0.1);
+            --glow-purple: 0 0 20px rgba(179, 71, 234, 0.5), 0 0 40px rgba(179, 71, 234, 0.25);
+            --glow-green: 0 0 20px rgba(57, 255, 20, 0.5), 0 0 40px rgba(57, 255, 20, 0.25);
+            --grid-color: rgba(0, 240, 255, 0.025);
+            --scanline-color: rgba(0, 240, 255, 0.015);
+            --particle-color: rgba(0, 240, 255, 0.4);
+        }
+
+        .light {
+            --bg-primary: #f8f5f0;
+            --bg-secondary: #f0ece6;
+            --bg-card: #ffffff;
+            --bg-card-hover: #faf8f4;
+            --bg-nav: #ffffff;
+            --text-primary: #1a1a2e;
+            --text-secondary: #3d3d55;
+            --text-muted: #6e6e88;
+            --border-color: #d8d0c5;
+            --border-light: #e5ddd2;
+            --neon-cyan: #008c9e;
+            --neon-pink: #c2185b;
+            --neon-purple: #7b1fa2;
+            --neon-green: #2e7d32;
+            --neon-yellow: #c79100;
+            --neon-orange: #d84315;
+            --glow-cyan: 0 0 15px rgba(0, 140, 158, 0.3), 0 0 30px rgba(0, 140, 158, 0.12);
+            --glow-pink: 0 0 15px rgba(194, 24, 91, 0.3), 0 0 30px rgba(194, 24, 91, 0.12);
+            --glow-purple: 0 0 15px rgba(123, 31, 162, 0.3), 0 0 30px rgba(123, 31, 162, 0.12);
+            --glow-green: 0 0 15px rgba(46, 125, 50, 0.3), 0 0 30px rgba(46, 125, 50, 0.12);
+            --grid-color: rgba(0, 140, 158, 0.03);
+            --scanline-color: rgba(0, 140, 158, 0.008);
+            --particle-color: rgba(0, 140, 158, 0.25);
+        }
+
+        * {
+            transition: background-color 0.5s ease, color 0.35s ease, border-color 0.4s ease, box-shadow 0.5s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', 'Poppins', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            cursor: default;
+            line-height: 1.7;
+        }
+
+        /* ============ PARTICLE BACKGROUND ============ */
+        #particlesCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.5;
+        }
+
+        /* Grid overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background-image:
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: center center;
+            animation: gridShift 25s linear infinite;
+        }
+        @keyframes gridShift {
+            0%,
+            100% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 25px 25px;
+            }
+        }
+
+        /* Scanline */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 2px,
+                    var(--scanline-color) 2px,
+                    var(--scanline-color) 4px);
+            animation: scanline 10s linear infinite;
+            opacity: 0.5;
+        }
+        @keyframes scanline {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        main,
+        header,
+        footer,
+        section {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--neon-cyan), var(--neon-purple));
+            border-radius: 10px;
+            box-shadow: var(--glow-cyan);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, var(--neon-pink), var(--neon-cyan));
+        }
+
+        /* ============ SCROLL PROGRESS BAR ============ */
+        #scrollProgressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink), var(--neon-purple));
+            z-index: 2000;
+            box-shadow: var(--glow-cyan);
+            transition: width 0.1s linear;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* ============ NAVBAR - SOLID & PREMIUM ============ */
+        .navbar-cyber {
+            background: var(--bg-nav) !important;
+            border-bottom: 1px solid var(--border-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+        }
+        .light .navbar-cyber {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            background: #ffffff !important;
+        }
+        .navbar-cyber.scrolled {
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+            border-bottom-color: var(--neon-cyan);
+        }
+        .light .navbar-cyber.scrolled {
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-cyber .nav-link {
+            color: var(--text-secondary) !important;
+            font-weight: 500;
+            position: relative;
+            padding: 10px 18px !important;
+            font-family: 'Space Grotesk', 'JetBrains Mono', monospace;
+            font-size: 0.88rem;
+            letter-spacing: 0.6px;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 8px;
+            margin: 0 1px;
+        }
+        .navbar-cyber .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 50%;
+            height: 2px;
+            background: var(--neon-cyan);
+            box-shadow: var(--glow-cyan);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+        }
+        .navbar-cyber .nav-link:hover {
+            color: var(--neon-cyan) !important;
+            background: rgba(0, 240, 255, 0.05);
+            text-shadow: 0 0 15px var(--neon-cyan);
+            transform: translateY(-1px);
+        }
+        .navbar-cyber .nav-link:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+        .navbar-brand-cyber {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-pink) 50%, var(--neon-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .navbar-brand-cyber:hover {
+            filter: brightness(1.4);
+            letter-spacing: 4px;
+            transform: scale(1.05);
+        }
+        .navbar-brand-cyber .brand-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--neon-cyan);
+            box-shadow: var(--glow-cyan);
+            margin-left: 2px;
+            animation: pulseNeon 2s ease-in-out infinite;
+            vertical-align: middle;
+            position: relative;
+            top: -2px;
+        }
+        @keyframes pulseNeon {
+            0%,
+            100% {
+                box-shadow: var(--glow-cyan);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(0, 240, 255, 0.8), 0 0 60px rgba(0, 240, 255, 0.4);
+                transform: scale(1.5);
+            }
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 2px solid var(--border-light);
+            background: var(--bg-card);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+        }
+        .theme-toggle:hover {
+            border-color: var(--neon-yellow);
+            box-shadow: 0 0 30px rgba(255, 230, 0, 0.5), 0 4px 20px rgba(0, 0, 0, 0.3);
+            transform: rotate(25deg) scale(1.08);
+        }
+        .theme-toggle:active {
+            transform: scale(0.95);
+        }
+        .theme-toggle .icon-sun,
+        .theme-toggle .icon-moon {
+            position: absolute;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1.3rem;
+        }
+        .dark .theme-toggle .icon-sun {
+            opacity: 1;
+            transform: translateY(0) rotate(0);
+        }
+        .dark .theme-toggle .icon-moon {
+            opacity: 0;
+            transform: translateY(35px) rotate(120deg);
+        }
+        .light .theme-toggle .icon-sun {
+            opacity: 0;
+            transform: translateY(-35px) rotate(-120deg);
+        }
+        .light .theme-toggle .icon-moon {
+            opacity: 1;
+            transform: translateY(0) rotate(0);
+        }
+
+        /* ============ AOS SCROLL ANIMATIONS ============ */
+        .aos-init {
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .aos-init.aos-animate {
+            opacity: 1;
+        }
+        /* Fade Up */
+        .aos-fade-up {
+            transform: translateY(60px);
+        }
+        .aos-fade-up.aos-animate {
+            transform: translateY(0);
+        }
+        /* Fade Down */
+        .aos-fade-down {
+            transform: translateY(-60px);
+        }
+        .aos-fade-down.aos-animate {
+            transform: translateY(0);
+        }
+        /* Fade Left */
+        .aos-fade-left {
+            transform: translateX(-60px);
+        }
+        .aos-fade-left.aos-animate {
+            transform: translateX(0);
+        }
+        /* Fade Right */
+        .aos-fade-right {
+            transform: translateX(60px);
+        }
+        .aos-fade-right.aos-animate {
+            transform: translateX(0);
+        }
+        /* Zoom In */
+        .aos-zoom-in {
+            transform: scale(0.8);
+        }
+        .aos-zoom-in.aos-animate {
+            transform: scale(1);
+        }
+        /* Zoom Out */
+        .aos-zoom-out {
+            transform: scale(1.2);
+        }
+        .aos-zoom-out.aos-animate {
+            transform: scale(1);
+        }
+        /* Flip */
+        .aos-flip-up {
+            transform: perspective(600px) rotateX(30deg);
+        }
+        .aos-flip-up.aos-animate {
+            transform: perspective(600px) rotateX(0);
+        }
+
+        /* Delay utilities */
+        .aos-delay-100 {
+            transition-delay: 0.1s;
+        }
+        .aos-delay-200 {
+            transition-delay: 0.2s;
+        }
+        .aos-delay-300 {
+            transition-delay: 0.3s;
+        }
+        .aos-delay-400 {
+            transition-delay: 0.4s;
+        }
+        .aos-delay-500 {
+            transition-delay: 0.5s;
+        }
+        .aos-delay-600 {
+            transition-delay: 0.6s;
+        }
+        .aos-delay-700 {
+            transition-delay: 0.7s;
+        }
+        .aos-delay-800 {
+            transition-delay: 0.8s;
+        }
+
+        /* ============ FLOATING IMAGE ============ */
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            20% {
+                transform: translateY(-22px) rotate(0.8deg);
+            }
+            40% {
+                transform: translateY(-6px) rotate(-0.4deg);
+            }
+            60% {
+                transform: translateY(-18px) rotate(0.3deg);
+            }
+            80% {
+                transform: translateY(-10px) rotate(-0.6deg);
+            }
+        }
+        @keyframes floatShadow {
+            0%,
+            100% {
+                box-shadow: var(--glow-cyan), 0 25px 60px rgba(0, 0, 0, 0.5);
+                border-color: var(--neon-cyan);
+            }
+            25% {
+                box-shadow: var(--glow-pink), 0 40px 70px rgba(0, 0, 0, 0.4);
+                border-color: var(--neon-pink);
+            }
+            50% {
+                box-shadow: var(--glow-purple), 0 20px 50px rgba(0, 0, 0, 0.55);
+                border-color: var(--neon-purple);
+            }
+            75% {
+                box-shadow: var(--glow-cyan), 0 45px 75px rgba(0, 0, 0, 0.35);
+                border-color: var(--neon-cyan);
+            }
+        }
+        .floating-img {
+            animation: float 6s ease-in-out infinite;
+        }
+        .floating-img-wrapper {
+            animation: floatShadow 6s ease-in-out infinite;
+            border-radius: 24px;
+            border: 3px solid var(--neon-cyan);
+            box-shadow: var(--glow-cyan);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .floating-img-wrapper:hover {
+            border-color: var(--neon-pink) !important;
+            box-shadow: var(--glow-pink) !important;
+            transform: scale(1.04) translateY(-8px);
+        }
+        .floating-img-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border-radius: 30px;
+            border: 2px dashed rgba(0, 240, 255, 0.3);
+            animation: spin-slow 20s linear infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Typing cursor */
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1.1em;
+            background: var(--neon-cyan);
+            box-shadow: var(--glow-cyan);
+            animation: cursorBlink 0.7s infinite;
+            vertical-align: text-bottom;
+            margin-left: 3px;
+            border-radius: 2px;
+        }
+        @keyframes cursorBlink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.15;
+            }
+        }
+
+        /* Glitch */
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+            cursor: default;
+        }
+        .glitch-text:hover {
+            animation: glitch 0.35s ease-in-out;
+        }
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-4px, 3px);
+                text-shadow: 2px 0 var(--neon-cyan), -2px 0 var(--neon-pink);
+            }
+            40% {
+                transform: translate(4px, -2px);
+                text-shadow: -2px 0 var(--neon-cyan), 2px 0 var(--neon-pink);
+            }
+            60% {
+                transform: translate(-3px, -3px);
+                text-shadow: 2px 0 var(--neon-pink), -2px 0 var(--neon-cyan);
+            }
+            80% {
+                transform: translate(3px, 2px);
+                text-shadow: -1px 0 var(--neon-cyan), 1px 0 var(--neon-pink);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        /* ============ NEON BUTTONS ============ */
+        .btn-neon {
+            display: inline-block;
+            padding: 13px 32px;
+            font-family: 'Space Grotesk', 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 2px solid var(--neon-cyan);
+            background: transparent;
+            color: var(--neon-cyan);
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            z-index: 1;
+            box-shadow: 0 0 0 rgba(0, 240, 255, 0);
+        }
+        .btn-neon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.25), transparent);
+            transition: left 0.6s ease;
+            z-index: -1;
+        }
+        .btn-neon:hover {
+            color: #000;
+            background: var(--neon-cyan);
+            box-shadow: var(--glow-cyan);
+            border-color: var(--neon-cyan);
+            transform: translateY(-4px);
+            letter-spacing: 2px;
+        }
+        .btn-neon:hover::before {
+            left: 100%;
+        }
+        .btn-neon:active {
+            transform: translateY(-1px) scale(0.97);
+        }
+        .btn-neon-pink {
+            border-color: var(--neon-pink);
+            color: var(--neon-pink);
+        }
+        .btn-neon-pink:hover {
+            background: var(--neon-pink);
+            box-shadow: var(--glow-pink);
+            border-color: var(--neon-pink);
+            color: #fff;
+        }
+
+        /* ============ TIMELINE ============ */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--neon-cyan), var(--neon-pink), var(--neon-purple));
+            box-shadow: var(--glow-cyan);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .timeline-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--neon-cyan);
+            box-shadow: var(--glow-cyan);
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            border: 3px solid var(--bg-primary);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .timeline-card:hover .timeline-dot {
+            background: var(--neon-pink);
+            box-shadow: var(--glow-pink);
+            transform: translateX(-50%) scale(1.5);
+        }
+        .timeline-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .timeline-card:hover {
+            transform: translateY(-6px) !important;
+        }
+
+        /* ============ GALLERY ============ */
+        .gallery-card {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid var(--border-color);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--bg-card);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+        .gallery-card:hover {
+            border-color: var(--neon-cyan);
+            box-shadow: var(--glow-cyan), 0 15px 50px rgba(0, 0, 0, 0.5);
+            transform: translateY(-10px) scale(1.03);
+        }
+        .gallery-card .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, 0.9) 100%);
+            opacity: 0;
+            transition: all 0.55s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 24px;
+        }
+        .gallery-card:hover .overlay {
+            opacity: 1;
+        }
+        .gallery-card .overlay-content {
+            transform: translateY(25px);
+            transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gallery-card:hover .overlay-content {
+            transform: translateY(0);
+        }
+        .gallery-card .gallery-icon-wrapper {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gallery-card:hover .gallery-icon-wrapper {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        /* ============ 3D CAROUSEL ============ */
+        .carousel-3d-container {
+            perspective: 1300px;
+            width: 100%;
+            height: 460px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-3d {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .carousel-3d-item {
+            position: absolute;
+            width: 270px;
+            height: 360px;
+            left: 50%;
+            top: 50%;
+            margin-left: -135px;
+            margin-top: -180px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 3px solid var(--border-color);
+            background: var(--bg-card);
+            box-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
+            transition: all 0.5s ease;
+            cursor: pointer;
+            backface-visibility: hidden;
+        }
+        .carousel-3d-item.active {
+            border-color: var(--neon-cyan);
+            box-shadow: var(--glow-cyan), 0 18px 55px rgba(0, 0, 0, 0.65);
+            z-index: 5;
+        }
+        .carousel-3d-item:hover {
+            border-color: var(--neon-pink);
+            box-shadow: var(--glow-pink), 0 18px 55px rgba(0, 0, 0, 0.65);
+            transform: translateY(-8px);
+        }
+        .carousel-3d-item .cert-inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+            background: linear-gradient(160deg, var(--bg-card), var(--bg-card-hover));
+            position: relative;
+        }
+        .cert-icon {
+            font-size: 3.2rem;
+            margin-bottom: 14px;
+            transition: transform 0.4s ease;
+        }
+        .carousel-3d-item:hover .cert-icon {
+            transform: scale(1.2);
+        }
+        .cert-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            color: var(--neon-cyan);
+        }
+        .cert-subtitle {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .cert-seal {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px dashed var(--neon-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 12px;
+            font-size: 0.6rem;
+            color: var(--neon-pink);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+        }
+        .carousel-3d-item:hover .cert-seal {
+            border-color: var(--neon-cyan);
+            color: var(--neon-cyan);
+            box-shadow: var(--glow-cyan);
+            transform: rotate(180deg);
+        }
+
+        .carousel-nav-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px solid var(--neon-cyan);
+            background: var(--bg-card);
+            color: var(--neon-cyan);
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .carousel-nav-btn:hover {
+            background: var(--neon-cyan);
+            color: #000;
+            box-shadow: var(--glow-cyan), 0 8px 30px rgba(0, 0, 0, 0.4);
+            border-color: var(--neon-cyan);
+            transform: scale(1.1);
+        }
+        .carousel-nav-btn:active {
+            transform: scale(0.92);
+        }
+
+        /* ============ SECTION TITLES ============ */
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 2.4rem;
+            letter-spacing: 4px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-pink) 60%, var(--neon-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-pink), transparent);
+            border-radius: 3px;
+        }
+        .section-subtitle {
+            font-family: 'Space Grotesk', 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ============ CARD CYBER ============ */
+        .card-cyber {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+        }
+        .card-cyber::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-pink), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .card-cyber:hover {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 12px 45px rgba(0, 240, 255, 0.12), 0 6px 30px rgba(0, 0, 0, 0.35);
+            transform: translateY(-6px);
+        }
+        .card-cyber:hover::before {
+            opacity: 1;
+        }
+        .card-cyber::after {
+            content: '';
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 30px;
+            height: 30px;
+            border-top: 2px solid var(--border-light);
+            border-right: 2px solid var(--border-light);
+            border-radius: 0 8px 0 0;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        .card-cyber:hover::after {
+            opacity: 1;
+            border-color: var(--neon-cyan);
+        }
+
+        /* ============ SOCIAL ICONS ============ */
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            color: var(--text-secondary);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            background: var(--bg-card);
+            position: relative;
+            overflow: hidden;
+        }
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .social-icon:hover {
+            border-color: var(--neon-cyan);
+            color: #fff;
+            box-shadow: var(--glow-cyan);
+            transform: translateY(-6px) rotate(10deg);
+            background: var(--bg-card-hover);
+        }
+        .social-icon:hover::before {
+            opacity: 0.2;
+        }
+        .social-icon.wa:hover {
+            border-color: #25D366;
+            color: #25D366;
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+        }
+        .social-icon.email:hover {
+            border-color: #EA4335;
+            color: #EA4335;
+            box-shadow: 0 0 30px rgba(234, 67, 53, 0.5);
+        }
+        .social-icon.github:hover {
+            border-color: #f0f6fc;
+            color: #f0f6fc;
+            box-shadow: 0 0 30px rgba(240, 246, 252, 0.5);
+        }
+
+        /* ============ MAP ============ */
+        .map-container {
+            border-radius: 18px;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+            transition: all 0.5s ease;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+        .map-container:hover {
+            border-color: var(--neon-cyan);
+            box-shadow: var(--glow-cyan), 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 280px;
+            border: none;
+            filter: grayscale(25%) contrast(1.1) brightness(0.9);
+            transition: all 0.5s ease;
+        }
+        .map-container:hover iframe {
+            filter: grayscale(0%) contrast(1) brightness(1);
+        }
+
+        /* ============ BADGE ============ */
+        .badge-premium {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            transition: all 0.4s ease;
+            cursor: default;
+        }
+        .badge-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ============ RIPPLE EFFECT ============ */
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+        .ripple::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(circle at center, rgba(0, 240, 255, 0.3) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        .ripple:hover::after {
+            opacity: 1;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+            .carousel-3d-container {
+                height: 400px;
+                perspective: 900px;
+            }
+            .carousel-3d-item {
+                width: 220px;
+                height: 290px;
+                margin-left: -110px;
+                margin-top: -145px;
+            }
+        }
+        @media (max-width: 768px) {
+            .carousel-3d-container {
+                height: 360px;
+                perspective: 700px;
+            }
+            .carousel-3d-item {
+                width: 190px;
+                height: 260px;
+                margin-left: -95px;
+                margin-top: -130px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+            }
+            .timeline-line {
+                left: 24px;
+            }
+            .timeline-dot {
+                left: 24px;
+                top: 30px;
+            }
+            .navbar-brand-cyber {
+                font-size: 1.1rem;
+                letter-spacing: 1.5px;
+            }
+            .floating-img-wrapper {
+                max-width: 240px;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 480px) {
+            .carousel-3d-container {
+                height: 300px;
+                perspective: 500px;
+            }
+            .carousel-3d-item {
+                width: 150px;
+                height: 210px;
+                margin-left: -75px;
+                margin-top: -105px;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+            .btn-neon {
+                padding: 10px 22px;
+                font-size: 0.78rem;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* Selection */
+        ::selection {
+            background: rgba(0, 240, 255, 0.3);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ SCROLL PROGRESS BAR ============ -->
+    <div id="scrollProgressBar"></div>
+
+    <!-- ============ PARTICLE CANVAS ============ -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- ============ NAVBAR - SOLID ============ -->
+    <header>
+        <nav class="navbar-cyber navbar navbar-expand-lg py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand-cyber text-decoration-none" href="#">
+                    <i class="bi bi-cpu-fill me-1"></i> AAS<span class="brand-dot"></span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCyber" aria-controls="navbarCyber" aria-expanded="false" aria-label="Toggle navigation" style="background: var(--bg-card); border-radius: 10px; padding: 10px 12px; border: 1px solid var(--border-light);">
+                    <span style="color: var(--neon-cyan); font-size: 1.4rem;">☰</span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCyber">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+                        <li class="nav-item"><a class="nav-link" href="#hero"><i class="bi bi-house-door me-1"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#timeline"><i class="bi bi-clock-history me-1"></i> Timeline</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery"><i class="bi bi-images me-1"></i> Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificates"><i class="bi bi-patch-check me-1"></i> Sertifikat</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-person me-1"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact-sec"><i class="bi bi-envelope me-1"></i> Kontak</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle Dark/Light Mode">
+                        <span class="icon-sun">☀️</span>
+                        <span class="icon-moon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============ HERO SECTION ============ -->
+        <section id="hero" class="min-vh-100 d-flex align-items-center py-5" style="padding-top: 100px;">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7 order-2 order-lg-1 text-center text-lg-start">
+                        <p class="text-uppercase fw-semibold mb-2 aos-init aos-fade-down" style="font-family:'Space Grotesk','JetBrains Mono',monospace; letter-spacing:4px; color:var(--neon-pink); font-size:0.8rem;">
+                            <i class="bi bi-terminal-fill me-1"></i> Portfolio Premium
+                        </p>
+                        <h1 class="display-3 fw-black mb-2 glitch-text aos-init aos-fade-up aos-delay-100" style="font-family:'Orbitron',sans-serif; letter-spacing:3px; line-height:1.15;">
+                            <span style="background:linear-gradient(135deg,var(--neon-cyan),var(--neon-pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+                                Annas Arrigo
+                            </span>
+                            <br>
+                            <span style="background:linear-gradient(135deg,var(--neon-purple),var(--neon-cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+                                Sachi
+                            </span>
+                        </h1>
+                        <div class="fs-4 fw-semibold mb-3 aos-init aos-fade-up aos-delay-200" style="font-family:'JetBrains Mono',monospace; color:var(--neon-cyan); min-height:2.5rem;">
+                            <span id="typingText"></span><span class="typing-cursor"></span>
+                        </div>
+                        <p class="lead mb-4 aos-init aos-fade-up aos-delay-300" style="color:var(--text-secondary); max-width:550px; line-height:1.8; font-size:1.05rem;">
+                            Seorang <strong style="color:var(--neon-cyan);">teknisi WiFi profesional</strong>, programmer handal, dan pembelajar AI yang passionate dalam <strong style="color:var(--neon-pink);">game development</strong>. Menggabungkan keahlian teknis dengan kreativitas untuk menciptakan solusi digital yang inovatif dan futuristik.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-lg-start aos-init aos-fade-up aos-delay-400">
+                            <a href="#about" class="btn-neon ripple"><i class="bi bi-person-lines-fill me-2"></i> Kenali Saya</a>
+                            <a href="#gallery" class="btn-neon btn-neon-pink ripple"><i class="bi bi-grid-3x3-gap-fill me-2"></i> Lihat Karya</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 order-1 order-lg-2 text-center aos-init aos-zoom-in aos-delay-300">
+                        <div class="d-inline-block position-relative floating-img-wrapper" style="border-radius:24px; padding:6px;">
+                            <div class="floating-img" style="width:280px;height:350px;margin:0 auto;border-radius:20px;overflow:hidden;background:linear-gradient(170deg,var(--bg-card),var(--bg-card-hover));display:flex;align-items:center;justify-content:center;position:relative;">
+                                <div class="text-center p-4">
+                                    <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-purple));margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;box-shadow:var(--glow-cyan);position:relative;">
+                                        <i class="bi bi-person-fill text-dark"></i>
+                                        <div style="position:absolute;inset:-6px;border-radius:50%;border:2px dashed rgba(255,255,255,0.3);animation:spin-slow 15s linear infinite;"></div>
+                                    </div>
+                                    <p style="font-family:'Orbitron',sans-serif;font-weight:800;color:var(--neon-cyan);letter-spacing:3px;font-size:0.85rem;">ANNAS ARRIGO</p>
+                                    <p style="color:var(--text-muted);font-size:0.7rem;font-family:'JetBrains Mono',monospace;">&lt;cyber_dev /&gt;</p>
+                                    <div style="width:50px;height:3px;background:linear-gradient(90deg,var(--neon-pink),var(--neon-cyan));margin:8px auto;border-radius:3px;"></div>
+                                </div>
+                                <div style="position:absolute;top:12px;left:12px;width:22px;height:22px;border-top:2px solid var(--neon-cyan);border-left:2px solid var(--neon-cyan);"></div>
+                                <div style="position:absolute;top:12px;right:12px;width:22px;height:22px;border-top:2px solid var(--neon-pink);border-right:2px solid var(--neon-pink);"></div>
+                                <div style="position:absolute;bottom:12px;left:12px;width:22px;height:22px;border-bottom:2px solid var(--neon-pink);border-left:2px solid var(--neon-pink);"></div>
+                                <div style="position:absolute;bottom:12px;right:12px;width:22px;height:22px;border-bottom:2px solid var(--neon-cyan);border-right:2px solid var(--neon-cyan);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TIMELINE SECTION ============ -->
+        <section id="timeline" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title mb-3 aos-init aos-fade-down">⚡ Timeline Perjalanan</h2>
+                    <p class="section-subtitle aos-init aos-fade-down aos-delay-100">2024 — 2026</p>
+                </div>
+                <div class="row justify-content-center position-relative">
+                    <div class="timeline-line d-none d-md-block"></div>
+                    <div class="col-md-5 mb-5 mb-md-0 position-relative aos-init aos-fade-right aos-delay-200">
+                        <div class="timeline-card card-cyber p-4 h-100 position-relative">
+                            <div class="timeline-dot" style="right:-9px;left:auto;transform:translateX(50%);"></div>
+                            <span style="font-family:'Orbitron',sans-serif;font-size:0.8rem;color:var(--neon-cyan);letter-spacing:3px;">2024</span>
+                            <h4 class="fw-bold mt-2 mb-2" style="color:var(--text-primary);">🚀 Awal Karir Teknisi WiFi</h4>
+                            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;">
+                                Memulai perjalanan sebagai teknisi WiFi profesional. Menangani instalasi jaringan, troubleshooting, dan optimasi sinyal untuk klien residensial dan bisnis kecil. Membangun fondasi kuat dalam infrastruktur jaringan.
+                            </p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(0,240,255,0.08);color:var(--neon-cyan);border:1px solid rgba(0,240,255,0.3);">Networking</span>
+                                <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(255,45,149,0.08);color:var(--neon-pink);border:1px solid rgba(255,45,149,0.3);">WiFi Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 position-relative aos-init aos-fade-left aos-delay-300">
+                        <div class="timeline-card card-cyber p-4 h-100 position-relative">
+                            <div class="timeline-dot" style="left:-9px;transform:translateX(-50%);"></div>
+                            <span style="font-family:'Orbitron',sans-serif;font-size:0.8rem;color:var(--neon-pink);letter-spacing:3px;">2025 — 2026</span>
+                            <h4 class="fw-bold mt-2 mb-2" style="color:var(--text-primary);">💻 Coding, AI & Game Dev</h4>
+                            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;">
+                                Memperdalam skill coding, eksplorasi Artificial Intelligence, dan terjun ke dunia Game Development. Menggabungkan semua keahlian teknis untuk menciptakan proyek-proyek inovatif di persimpangan teknologi.
+                            </p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(179,71,234,0.08);color:var(--neon-purple);border:1px solid rgba(179,71,234,0.3);">AI Learner</span>
+                                <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(57,255,20,0.08);color:var(--neon-green);border:1px solid rgba(57,255,20,0.3);">Game Dev</span>
+                                <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(0,240,255,0.08);color:var(--neon-cyan);border:1px solid rgba(0,240,255,0.3);">Coding</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GALLERY SECTION ============ -->
+        <section id="gallery" class="py-5" style="background:var(--bg-secondary);">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title mb-3 aos-init aos-fade-down">📸 Gallery Karya</h2>
+                    <p class="section-subtitle aos-init aos-fade-down aos-delay-100">Retro Cyberpunk Collection</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 aos-init aos-fade-up aos-delay-100">
+                        <div class="gallery-card" style="height:310px;">
+                            <div style="width:100%;height:100%;background:linear-gradient(135deg,#141428,#0d1b2a);display:flex;align-items:center;justify-content:center;" class="gallery-icon-wrapper">
+                                <span style="font-size:4.5rem;">🔧</span>
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h5 style="color:var(--neon-cyan);font-family:'Orbitron',sans-serif;font-size:1rem;letter-spacing:1px;">Instalasi WiFi Pro</h5>
+                                    <p style="color:#ccc;font-size:0.8rem;">Setup jaringan profesional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 aos-init aos-fade-up aos-delay-200">
+                        <div class="gallery-card" style="height:310px;">
+                            <div style="width:100%;height:100%;background:linear-gradient(135deg,#2a0a2a,#1a0a2e);display:flex;align-items:center;justify-content:center;" class="gallery-icon-wrapper">
+                                <span style="font-size:4.5rem;">💻</span>
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h5 style="color:var(--neon-pink);font-family:'Orbitron',sans-serif;font-size:1rem;letter-spacing:1px;">Coding Project</h5>
+                                    <p style="color:#ccc;font-size:0.8rem;">Web & App Development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 aos-init aos-fade-up aos-delay-300">
+                        <div class="gallery-card" style="height:310px;">
+                            <div style="width:100%;height:100%;background:linear-gradient(135deg,#0a2a1a,#0a1a2e);display:flex;align-items:center;justify-content:center;" class="gallery-icon-wrapper">
+                                <span style="font-size:4.5rem;">🤖</span>
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h5 style="color:var(--neon-green);font-family:'Orbitron',sans-serif;font-size:1rem;letter-spacing:1px;">AI Exploration</h5>
+                                    <p style="color:#ccc;font-size:0.8rem;">Machine Learning Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 aos-init aos-fade-up aos-delay-400">
+                        <div class="gallery-card" style="height:290px;">
+                            <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a0a,#2a1a0a);display:flex;align-items:center;justify-content:center;" class="gallery-icon-wrapper">
+                                <span style="font-size:4.5rem;">🎮</span>
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h5 style="color:var(--neon-yellow);font-family:'Orbitron',sans-serif;font-size:1rem;letter-spacing:1px;">Game Dev Prototype</h5>
+                                    <p style="color:#ccc;font-size:0.8rem;">Unity & Unreal Engine</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 aos-init aos-fade-up aos-delay-500">
+                        <div class="gallery-card" style="height:290px;">
+                            <div style="width:100%;height:100%;background:linear-gradient(135deg,#2a0a1a,#1a0a2a);display:flex;align-items:center;justify-content:center;" class="gallery-icon-wrapper">
+                                <span style="font-size:4.5rem;">🌐</span>
+                            </div>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h5 style="color:var(--neon-purple);font-family:'Orbitron',sans-serif;font-size:1rem;letter-spacing:1px;">Network Engineering</h5>
+                                    <p style="color:#ccc;font-size:0.8rem;">Infrastructure & Security</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CERTIFICATES 3D CAROUSEL ============ -->
+        <section id="certificates" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-4">
+                    <h2 class="section-title mb-3 aos-init aos-fade-down">🏆 Sertifikat</h2>
+                    <p class="section-subtitle aos-init aos-fade-down aos-delay-100">8 Professional Certifications — Geser atau Auto-Rotate</p>
+                </div>
+                <div class="carousel-3d-container aos-init aos-zoom-in aos-delay-200" id="carousel3D">
+                    <div class="carousel-3d" id="carouselInner"></div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center gap-4 mt-4 aos-init aos-fade-up aos-delay-300">
+                    <button class="carousel-nav-btn" id="carouselPrev" title="Previous"><i class="bi bi-chevron-left"></i></button>
+                    <div class="d-flex gap-2" id="carouselDots"></div>
+                    <button class="carousel-nav-btn" id="carouselNext" title="Next"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ABOUT ME SECTION ============ -->
+        <section id="about" class="py-5" style="background:var(--bg-secondary);">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title mb-3 aos-init aos-fade-down">👤 About Me</h2>
+                </div>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5 text-center aos-init aos-fade-right aos-delay-200">
+                        <div class="position-relative d-inline-block" style="border-radius:22px;overflow:hidden;border:3px solid var(--neon-cyan);box-shadow:var(--glow-cyan);">
+                            <div style="width:100%;max-width:320px;height:370px;background:linear-gradient(180deg,var(--bg-card),var(--bg-card-hover));display:flex;align-items:center;justify-content:center;margin:0 auto;">
+                                <div class="text-center p-4">
+                                    <div style="width:105px;height:105px;border-radius:50%;background:linear-gradient(135deg,var(--neon-pink),var(--neon-purple));margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:var(--glow-pink);">
+                                        <i class="bi bi-person-badge text-white"></i>
+                                    </div>
+                                    <p style="font-family:'Orbitron',sans-serif;font-weight:800;color:var(--neon-cyan);letter-spacing:3px;font-size:0.9rem;">ANNAS ARRIGO SACHI</p>
+                                    <p style="color:var(--text-muted);font-size:0.78rem;font-family:'Space Grotesk',monospace;">Teknisi WiFi • Coder • AI Learner • Game Dev</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 aos-init aos-fade-left aos-delay-300">
+                        <h3 class="fw-bold mb-3" style="font-family:'Orbitron',sans-serif;color:var(--neon-cyan);letter-spacing:2px;">Halo! 👋</h3>
+                        <p style="color:var(--text-secondary);line-height:1.9;font-size:1rem;">
+                            Saya <strong style="color:var(--neon-pink);">Annas Arrigo Sachi</strong>, seorang profesional di bidang teknologi yang berdomisili di <strong style="color:var(--neon-cyan);">Surabaya, Kenjeran</strong>. Dengan pengalaman sebagai teknisi WiFi sejak 2024, saya telah membantu banyak klien dalam mengoptimalkan jaringan mereka.
+                        </p>
+                        <p style="color:var(--text-secondary);line-height:1.9;font-size:1rem;">
+                            Saat ini saya juga mendalami <strong style="color:var(--neon-purple);">coding, Artificial Intelligence, dan Game Development</strong>. Saya percaya bahwa teknologi adalah alat untuk menciptakan masa depan yang lebih baik. Setiap hari adalah kesempatan untuk belajar hal baru.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap mt-4" id="contact-sec">
+                            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="social-icon wa" title="WhatsApp">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                            <a href="mailto:annasarrigo@email.com" class="social-icon email" title="Email">
+                                <i class="bi bi-envelope-fill"></i>
+                            </a>
+                            <a href="https://github.com/annasarrigo" target="_blank" rel="noopener" class="social-icon github" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="py-5" style="background:var(--bg-primary);border-top:1px solid var(--border-color);">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6 aos-init aos-fade-up aos-delay-100">
+                    <h5 class="fw-bold mb-3" style="font-family:'Orbitron',sans-serif;color:var(--neon-cyan);letter-spacing:2px;font-size:0.95rem;">
+                        <i class="bi bi-geo-alt-fill me-2"></i> Lokasi
+                    </h5>
+                    <div class="map-container">
+                        <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=112.76,-7.232,112.78,-7.218&layer=mapnik&marker=-7.225,112.77"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Map Lokasi Kalilom Lor Timur, Kenjeran, Surabaya">
+                    </iframe>
+                </div>
+                <p style="color:var(--text-muted);font-size:0.8rem;margin-top:10px;">
+                    <i class="bi bi-pin-map-fill me-1" style="color:var(--neon-pink);"></i>
+                    Jalan Kalilom Lor Timur, Kenjeran, Surabaya
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-6 aos-init aos-fade-up aos-delay-200">
+                <h5 class="fw-bold mb-3" style="font-family:'Orbitron',sans-serif;color:var(--neon-pink);letter-spacing:2px;font-size:0.95rem;">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#hero" style="color:var(--text-secondary);text-decoration:none;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;" onmouseover="this.style.color='var(--neon-cyan)';this.style.paddingLeft='8px';" onmouseout="this.style.color='var(--text-secondary)';this.style.paddingLeft='0';">→ Home</a></li>
+                    <li class="mb-2"><a href="#timeline" style="color:var(--text-secondary);text-decoration:none;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;" onmouseover="this.style.color='var(--neon-cyan)';this.style.paddingLeft='8px';" onmouseout="this.style.color='var(--text-secondary)';this.style.paddingLeft='0';">→ Timeline</a></li>
+                    <li class="mb-2"><a href="#gallery" style="color:var(--text-secondary);text-decoration:none;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;" onmouseover="this.style.color='var(--neon-cyan)';this.style.paddingLeft='8px';" onmouseout="this.style.color='var(--text-secondary)';this.style.paddingLeft='0';">→ Gallery</a></li>
+                    <li class="mb-2"><a href="#certificates" style="color:var(--text-secondary);text-decoration:none;transition:all 0.3s;font-family:'Space Grotesk',sans-serif;" onmouseover="this.style.color='var(--neon-cyan)';this.style.paddingLeft='8px';" onmouseout="this.style.color='var(--text-secondary)';this.style.paddingLeft='0';">→ Certificates</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 aos-init aos-fade-up aos-delay-300">
+                <h5 class="fw-bold mb-3" style="font-family:'Orbitron',sans-serif;color:var(--neon-purple);letter-spacing:2px;font-size:0.95rem;">Tech Stack</h5>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(0,240,255,0.06);color:var(--neon-cyan);border:1px solid rgba(0,240,255,0.25);">WiFi Tech</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(255,45,149,0.06);color:var(--neon-pink);border:1px solid rgba(255,45,149,0.25);">Python</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(179,71,234,0.06);color:var(--neon-purple);border:1px solid rgba(179,71,234,0.25);">JavaScript</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(57,255,20,0.06);color:var(--neon-green);border:1px solid rgba(57,255,20,0.25);">AI/ML</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(255,230,0,0.06);color:var(--neon-yellow);border:1px solid rgba(255,230,0,0.25);">Game Dev</span>
+                    <span class="badge rounded-pill px-3 py-2 badge-premium" style="background:rgba(255,107,53,0.06);color:var(--neon-orange);border:1px solid rgba(255,107,53,0.25);">Networking</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5 pt-4" style="border-top:1px solid var(--border-color);">
+            <p class="mb-0" style="font-family:'Space Grotesk','JetBrains Mono',monospace;font-size:0.82rem;color:var(--text-muted);letter-spacing:1.5px;">
+                © <span style="color:var(--neon-cyan);font-weight:700;">AnnasArrigo</span> 2026 — All Rights Reserved
+            </p>
+            <p style="font-size:0.68rem;color:var(--text-muted);margin-top:5px;">
+                Crafted with <span style="color:var(--neon-pink);">❤</span> in Surabaya • <span style="color:var(--neon-purple);">Retro Cyberpunk Premium Theme</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script>
+    (function() {
+        // ============ DARK/LIGHT MODE ============
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            html.classList.remove('dark');
+            html.classList.add('light');
+        } else {
+            html.classList.add('dark');
+            html.classList.remove('light');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                html.classList.remove('light');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // ============ SCROLL PROGRESS BAR ============
+        const progressBar = document.getElementById('scrollProgressBar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            progressBar.style.width = progress + '%';
+        });
+
+        // ============ NAVBAR SCROLL ============
+        const navbar = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ============ PARTICLES CANVAS ============
+        const canvas = document.getElementById('particlesCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        const particleCount = 55;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.8 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.4;
+                this.speedY = (Math.random() - 0.5) * 0.4;
+                this.opacity = Math.random() * 0.6 + 0.2;
+                this.pulseSpeed = Math.random() * 0.02 + 0.005;
+                this.pulseOffset = Math.random() * Math.PI * 2;
+            }
+            update(time) {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.opacity = 0.3 + Math.sin(time * this.pulseSpeed + this.pulseOffset) * 0.2;
+
+                if (this.x < -10) this.x = canvas.width + 10;
+                if (this.x > canvas.width + 10) this.x = -10;
+                if (this.y < -10) this.y = canvas.height + 10;
+                if (this.y > canvas.height + 10) this.y = -10;
+            }
+            draw(ctx) {
+                const isDark = html.classList.contains('dark');
+                const color = isDark ? '0, 240, 255' : '0, 140, 158';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${color}, ${this.opacity})`;
+                ctx.fill();
+                // Glow
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * 2.5, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${color}, ${this.opacity * 0.12})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        let animationTime = 0;
+
+        function animateParticles(timestamp) {
+            animationTime = timestamp;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update(timestamp);
+                p.draw(ctx);
+            });
+            // Draw connections
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        const isDark = html.classList.contains('dark');
+                        const color = isDark ? '0, 240, 255' : '0, 140, 158';
+                        const alpha = (1 - dist / 120) * 0.08;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(${color}, ${alpha})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        requestAnimationFrame(animateParticles);
+
+        // ============ AOS SCROLL ANIMATION ============
+        const aosElements = document.querySelectorAll('.aos-init');
+
+        function checkAOS() {
+            const windowHeight = window.innerHeight;
+            const triggerPoint = windowHeight * 0.85;
+
+            aosElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const elementTop = rect.top;
+
+                if (elementTop < triggerPoint) {
+                    el.classList.add('aos-animate');
+                }
+            });
+        }
+
+        // Initial check
+        setTimeout(checkAOS, 150);
+        window.addEventListener('scroll', checkAOS, { passive: true });
+        window.addEventListener('resize', checkAOS, { passive: true });
+
+        // ============ TYPING ANIMATION ============
+        const typingTextEl = document.getElementById('typingText');
+        const phrases = ['Teknisi WiFi', 'Coding', 'AI Learner', 'Game Dev'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+
+        function typeAnimation() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                typingTextEl.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 35;
+            } else {
+                typingTextEl.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 85;
+            }
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typingSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typingSpeed = 350;
+            }
+            setTimeout(typeAnimation, typingSpeed);
+        }
+        setTimeout(typeAnimation, 700);
+
+        // ============ 3D CERTIFICATE CAROUSEL ============
+        const carouselInner = document.getElementById('carouselInner');
+        const carouselDots = document.getElementById('carouselDots');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        const totalSlides = 8;
+        const anglePerSlide = 360 / totalSlides;
+        let translateZ = 380;
+        let currentRotation = 0;
+        let autoSlideInterval;
+        let isDragging = false;
+        let startX = 0;
+        let dragRotation = 0;
+
+        const certData = [
+            { icon: '📡', title: 'Networking Basics', subtitle: 'Cisco Certified', color: '#00f0ff' },
+            { icon: '🔐', title: 'Cybersecurity Fund.', subtitle: 'CompTIA Security+', color: '#ff2d95' },
+            { icon: '☁️', title: 'Cloud Computing', subtitle: 'AWS Cloud Practitioner', color: '#b347ea' },
+            { icon: '🤖', title: 'AI Fundamentals', subtitle: 'DeepLearning.AI', color: '#39ff14' },
+            { icon: '🎮', title: 'Game Development', subtitle: 'Unity Certified', color: '#ffe600' },
+            { icon: '💻', title: 'Web Development', subtitle: 'Full Stack MERN', color: '#ff6b35' },
+            { icon: '📶', title: 'Wireless Tech', subtitle: 'WiFi Alliance Cert', color: '#00f0ff' },
+            { icon: '🐍', title: 'Python Advanced', subtitle: 'PCAP Certification', color: '#ff2d95' },
+        ];
+
+        function buildCarousel() {
+            carouselInner.innerHTML = '';
+            carouselDots.innerHTML = '';
+            certData.forEach((cert, i) => {
+                const angle = i * anglePerSlide;
+                const item = document.createElement('div');
+                item.className = 'carousel-3d-item';
+                item.style.transform = `rotateY(${angle}deg) translateZ(${translateZ}px)`;
+                item.setAttribute('data-index', i);
+                item.innerHTML = `
+                    <div class="cert-inner">
+                        <div class="cert-icon">${cert.icon}</div>
+                        <div class="cert-title" style="color:${cert.color};">${cert.title}</div>
+                        <div class="cert-subtitle">${cert.subtitle}</div>
+                        <div class="cert-seal" style="border-color:${cert.color};color:${cert.color};">CERT</div>
+                        <div style="margin-top:6px;font-size:0.6rem;color:var(--text-muted);">${String(i+1).padStart(2,'0')}/${String(totalSlides).padStart(2,'0')}</div>
+                    </div>
+                `;
+                carouselInner.appendChild(item);
+                const dot = document.createElement('span');
+                dot.style.cssText =
+                    `width:10px;height:10px;border-radius:50%;background:var(--border-color);cursor:pointer;transition:all 0.35s ease;display:inline-block;`;
+                dot.setAttribute('data-index', i);
+                dot.addEventListener('click', () => goToSlide(i));
+                carouselDots.appendChild(dot);
+            });
+            updateActiveSlide();
+            updateDots();
+        }
+
+        function updateCarousel() {
+            carouselInner.style.transform = `rotateY(${currentRotation}deg)`;
+            updateActiveSlide();
+            updateDots();
+        }
+
+        function updateActiveSlide() {
+            let normalized = ((currentRotation % 360) + 360) % 360;
+            let activeIndex = Math.round(normalized / anglePerSlide) % totalSlides;
+            if (activeIndex < 0) activeIndex += totalSlides;
+            document.querySelectorAll('.carousel-3d-item').forEach((item, i) => {
+                item.classList.toggle('active', i === activeIndex);
+            });
+        }
+
+        function updateDots() {
+            let normalized = ((currentRotation % 360) + 360) % 360;
+            let activeIndex = Math.round(normalized / anglePerSlide) % totalSlides;
+            if (activeIndex < 0) activeIndex += totalSlides;
+            const dots = carouselDots.querySelectorAll('span');
+            dots.forEach((dot, i) => {
+                if (i === activeIndex) {
+                    dot.style.background = 'var(--neon-cyan)';
+                    dot.style.boxShadow = 'var(--glow-cyan)';
+                    dot.style.transform = 'scale(1.5)';
+                } else {
+                    dot.style.background = 'var(--border-color)';
+                    dot.style.boxShadow = 'none';
+                    dot.style.transform = 'scale(1)';
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentRotation = -index * anglePerSlide;
+            updateCarousel();
+            resetAutoSlide();
+        }
+
+        function nextSlide() {
+            currentRotation -= anglePerSlide;
+            updateCarousel();
+            resetAutoSlide();
+        }
+
+        function prevSlide() {
+            currentRotation += anglePerSlide;
+            updateCarousel();
+            resetAutoSlide();
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                currentRotation -= anglePerSlide;
+                updateCarousel();
+            }, 3500);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        const carouselContainer = document.getElementById('carousel3D');
+        carouselContainer.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            dragRotation = currentRotation;
+            carouselContainer.style.cursor = 'grabbing';
+            clearInterval(autoSlideInterval);
+        });
+        carouselContainer.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            dragRotation = currentRotation;
+            clearInterval(autoSlideInterval);
+        }, { passive: true });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const delta = e.clientX - startX;
+            currentRotation = dragRotation + (delta * 0.4);
+            updateCarousel();
+        });
+        window.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const delta = e.touches[0].clientX - startX;
+            currentRotation = dragRotation + (delta * 0.4);
+            updateCarousel();
+        }, { passive: true });
+
+        window.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                carouselContainer.style.cursor = 'default';
+                resetAutoSlide();
+            }
+        });
+        window.addEventListener('touchend', () => {
+            if (isDragging) {
+                isDragging = false;
+                resetAutoSlide();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        function adjustCarousel() {
+            const width = window.innerWidth;
+            if (width <= 480) translateZ = 190;
+            else if (width <= 768) translateZ = 260;
+            else translateZ = 380;
+
+            document.querySelectorAll('.carousel-3d-item').forEach((item, i) => {
+                const angle = i * anglePerSlide;
+                item.style.transform = `rotateY(${angle}deg) translateZ(${translateZ}px)`;
+            });
+        }
+
+        window.addEventListener('resize', adjustCarousel);
+        adjustCarousel();
+        buildCarousel();
+        updateCarousel();
+        autoSlideInterval = setInterval(() => {
+            currentRotation -= anglePerSlide;
+            updateCarousel();
+        }, 3500);
+
+        // ============ SMOOTH SCROLL ============
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const position = target.getBoundingClientRect().top + window.pageYOffset -
+                        offset;
+                    window.scrollTo({ top: position, behavior: 'smooth' });
+                    const navbarCollapse = document.getElementById('navbarCyber');
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                        if (bsCollapse) bsCollapse.hide();
+                    }
+                }
+            });
+        });
+
+        console.log('%c🚀 Annas Arrigo Sachi %cPortfolio Premium',
+            'font-family:Orbitron,sans-serif;font-size:1.3rem;color:#00f0ff;font-weight:900;',
+            'color:#ff2d95;font-weight:bold;');
+        console.log('%cRetro Cyberpunk Theme %c⚡ %cModern • Elegant • Futuristic',
+            'color:#b347ea;font-weight:bold;', 'color:#ffe600;', 'color:#39ff14;');
+        console.log('%c© AnnasArrigo 2026 %c| All Rights Reserved',
+            'color:#ff6b35;font-family:JetBrains Mono,monospace;',
+            'color:#b0b0c0;');
+        console.log('%c✨ Premium Edition with Particle System & AOS Animations',
+            'color:#00f0ff;font-style:italic;');
+    })();
+</script>
+</body>
+</html>
